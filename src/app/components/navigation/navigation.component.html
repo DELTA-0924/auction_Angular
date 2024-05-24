@@ -1,0 +1,13 @@
+<header class="  bg-blue-400 h-[80px] w-[100vw] flex justify-between items-center  rounded-b-lg shadow-2xl ">
+        <span class="fond-bold text-3xl space-x-2 " (click)="ChangePage('main')" routerLink=""> 
+            <span class="bg-gray-300 text-green-900 rounded-l-lg pl-2">Intern</span> 
+            <span class="bg-green-300 text-gray-900 rounded-r-lg pr-2">Hunter</span>
+        </span>
+        <div class="space-x-2">
+            <a *ngIf="Logged" routerLink="/profile" class="hover:underline" (click)="ChangePage('main')">Profile</a>
+            <a *ngIf="Admin" routerLink="/create-auction" class="bg-red-300 rounded-lg py-2 px-4 hover:bg-red-500" (click)="ChangePage('main')">CreateAuction </a>
+            <a *ngIf="currentPage=='auctions'" routerLink="" class="bg-red-300 rounded-lg py-2 px-4 hover:bg-red-500 "(click)="ChangePage('main')" >Main Page</a>
+            <a routerLink="/auctions" class="bg-red-300 rounded-lg py-2 px-4 hover:bg-red-500" (click)="ChangePage('auctions')">Auctions</a>            
+        </div>
+    
+</header>   

@@ -1,0 +1,37 @@
+<div>
+    
+    <div class=" absolute top-[30%] left-[35%] w-[400px] h-[300px] bg-slate-50 bg-opacity-50 rounded-lg py-[30px] px-[30px]">
+        <div class="relative">
+            <h3 class="flex justify-center rounded-lg bg-green-300 text-blue-900 italic font-bold"> Registration</h3>
+        <div class="flex flex-wrap bg-blue-200 rounded-lg bg-opacity-50 py-[10px] px-[10px]">            
+            <div class="flex flex-col">
+                <label > Username</label>
+                <input  class="bg-slate-50 rounded-lg shadow hover:shadow-bright-lg focus:outline-none" #username="ngModel" required
+                    [(ngModel)]="User.Username" >
+                    <div [hidden]="username.valid||username.untouched">
+                            <span class="text-red-500 italic">полле вода не корректно или  пустое</span>
+                    </div>
+            </div>
+            <div class="flex flex-col">
+                <label > email</label>
+                <input required class="bg-slate-50 rounded-lg shadow hover:shadow-bright-lg focus:outline-none" 
+                    [(ngModel)]="User.Email">
+            </div>
+            <div class="flex flex-col">
+                <label > Password</label>
+                <input required class="bg-slate-50 rounded-lg shadow hover:shadow-bright-lg focus:outline-none" 
+                [(ngModel)]="User.password">
+            </div>
+            <select name="Role" [(ngModel)]="selectedOption" class="absolute right-0 top-[63%] h-6 w-15 " >
+                
+                <option *ngFor="let option of options"[ngValue]="option.name">{{option.name}}</option>                
+            </select>            
+        </div>  
+        <div class="flex flex-wrap mt-[20px]">
+            <button class="rounded-lg bg-white py-2 px-5 text-blue-500 hover:text-blue-900 transition duration-300 hover:scale-110 " 
+                (click)="CreateUser()"> Register</button>
+            <a class=" absolute  right-0 flex bg-blue-500 items-center ml-5 px-5 py-2 rounded-full transition duration-300 hover:scale-110 hover:underline" routerLink="/login"> I have acccount </a>           
+        </div>
+    </div>
+    </div>
+</div>

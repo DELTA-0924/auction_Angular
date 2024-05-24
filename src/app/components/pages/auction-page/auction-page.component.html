@@ -1,0 +1,14 @@
+
+    <!-- <div class=" flex flex-wrap justify-center space-x-5 space-y-5">
+        <App-auction
+        *ngFor="let auction of auctions"
+        [auction]="auction"
+        ></App-auction>
+    </div> -->
+    <div class="mt-[100px]">
+    <p *ngIf="loading" class="flex justify-center font-bold italic">Loading...</p>
+        <div  class="flex flex-wrap justify-center space-x-5 space-y-5">
+          <App-auction *ngFor="let auction of auctions" [auction]="auction"></App-auction>
+        </div>
+    </div>
+    

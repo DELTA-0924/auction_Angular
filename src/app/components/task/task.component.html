@@ -1,0 +1,7 @@
+<div class="grid grid-cols-4  gap-4">
+    <div>{{TaskChildren.studentName}}</div>
+    <div> {{TaskChildren.content}}</div>
+    <input type="number" class="rounded-lg w-10" [(ngModel)]="point">
+
+    <button (click)="createRating(TaskChildren.studentId)"> Оценить</button>
+</div>

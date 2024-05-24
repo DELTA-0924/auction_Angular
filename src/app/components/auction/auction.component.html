@@ -1,0 +1,17 @@
+
+    <div class="w-[400px] max-h-[300px] min-h-[250px] bg-blue-600 rounded-lg py-5 px-5 border-4 border-green-300 
+    transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 bg-blue-500 ">
+    <h4 class=" font-bold">Позиция</h4>        
+        {{auction.titleName}}
+    <h4 class=" font-bold">Описание</h4>        
+    <p>{{auction.description|slice:0:50}}...</p>
+    <h5 class=" font-bold">Дата окончания</h5>
+    <p>{{auction.finished}}</p>
+    <h5 class=" font-bold">Статус</h5>
+    <p>{{auction.status}}</p>
+    <button  [routerLink]="['/auction',auction.id]"  class="bg-green-700 w-12 h-5 hover:bg-green-300">Detail</button>
+    {{auction.creator}}
+    </div>
+
+    <!--  -->
+   

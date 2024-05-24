@@ -1,0 +1,13 @@
+<div >
+    <div  class="absolute top-[20%] left-[20%] bg-white bg-opacity-50 rounded-lg w-[500px] h-[500px]">
+        <div class="flex flex-col gap-4 p-12">
+            <label for="title">Title</label>
+            <input id="title" [(ngModel)]="Auction.titleName">
+            <label for="desc">Description</label>
+            <textarea id="desc" [(ngModel)]="Auction.description"></textarea>
+            <label for="date">Date of end</label>
+            <input id="date" [(ngModel)]="Auction.finished" type="date">
+            <button (click)="CreateAuction()">Создать</button>
+        </div>
+    </div>
+</div>

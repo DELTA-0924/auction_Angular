@@ -1,0 +1,39 @@
+
+<div class="pt-[125px] flex justify-center ">
+    <div class=" overflow-hidden relative h-[600px] w-[900px] bg-gray-300 rounded-t-[10%]">                
+             <div class=" bg-auto h-[250px] w-[900px]  bg-center-top bg-blue-700 
+             flex  justify-end  items-end text-white space-x-20">            
+             
+                <div> {{User.Firstname}} </div>
+                <div>{{User.Surname}}</div> 
+                <button  (click)="editflag=true" class="w-15 h-5 bg-white rounded-full text-black pb-5 px-5 ">Редактировать</button>
+            
+        </div>
+             <div class="absolute top-[25%] left-[12%] border-8 border-white rounded-full bg-red-500 w-[200px] h-[200px]">
+            <div class="mt-[140px] ml-[200px] w-[500px] space-y-10">
+                <div class="text-black">Email:<span class="font-bold">{{User.Email}}</span></div>      
+                <div class="flex flex-wrap">
+                   {{User.Aboutme}}
+                </div>
+            </div>
+             </div>
+            </div>
+    </div>
+        <div [hidden]="!editflag" class="absolute p-[10px] bg-white top-[20%] left-[30%] w-[600px] h-[500px] overflow-hidden rounded-lg">
+            <div class="grid grid-cols-2 gap-4 p-10">
+                <div class="mb-2">Firstname</div>
+                <div>Surname </div>                
+                <input [(ngModel)]="User.Firstname" id="Firstname" type="text" class="h-8 rounded-lg border-2 border-black focus:outline-none">
+                <input [(ngModel)]="User.Surname" id="Surname" type="text" class="h-8 rounded-lg border-2 border-black focus:outline-none">
+                <div class="col-start-1">About me</div>                
+                <textarea [(ngModel)]="User.Aboutme" id="Surname" type="text" class="h-8 rounded-lg border-2 border-black focus:outline-none col-span-2 h-20">
+                </textarea>
+                <div class="col-start-1">About company</div>                
+                <textarea [(ngModel)]="User.Company" id="Surname" type="text" class="h-8 rounded-lg border-2 border-black focus:outline-none col-span-2 h-20">                    
+                </textarea>
+                <div>Age</div>
+                <input [(ngModel)]="User.age" type="number" class="h-8 rounded-lg border-2 border-black focus:outline-none">
+                <button (click)="Updatedata()">Изменить</button>
+                <button (click)="editflag=false"> Закрыть</button>
+            </div>            
+            </div>
